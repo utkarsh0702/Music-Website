@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>3D swipe slider</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <link rel="stylesheet" type="text/css" href="swiper.min.css" >
+        <script>
+                function clickplay(id){
+                    var audio= document.getElementById(id);
+                if(audio.paused){
+                    audio.play();
+                }
+                else{
+                    audio.pause();
+                }
+                }
+            </script>
+        <style>
+             body {
+      background: #262626;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      padding-top: 200px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 380px;
+        background: #fff;
+    }
+            .swiper-slide .imgbx{
+                width: 100%;
+                height: 300px;
+                overflow: hidden;
+            }
+            .swiper-slide .imgbx img{
+               width: 100%;
+            }
+            .swiper-slide .details{
+                box-sizing: border-box;
+                font-size: 20px;
+            }
+            .swiper-slide .details h3{
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+                text-align: center;
+                line-height: 20px;
+            }
+            .swiper-slide .details h3 span{
+                font-size: 16px;
+                color: #f44336;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" >
+        <div class="imgbx">
+            <audio id="a1" src="songs/Chale%20Aana%20(De%20De%20Pyaar%20De)_64-(MrPaji.com).mp3"></audio>
+            <img src="image/chale%20aana.jpg" onclick="clickplay('a1')">
+            
+        </div>
+          <div class="details">
+              <h3>Chale Aana<br><span>Armaan Malik</span></h3>
+        </div>
+        </div>
+        <div class="swiper-slide" >
+        <div class="imgbx">
+            <audio id="a2" src="songs/Tujhe%20Kitna%20Chahne%20Lage%20Kabir%20Singh_64-(Mp3Lan).mp3"></audio>
+            <img src="image/tuje%20kitna%20chahne%20lge%20hum%20pic.jpg" onclick="clickplay('a2')">
+            
+        </div>
+          <div class="details">
+              <h3>Tujhe Kitna Chahne Lage<br><span>Arjit Singh</span></h3>
+        </div>
+        </div>
+        <div class="swiper-slide" >
+        <div class="imgbx">
+            <audio id="a3" src="songs/Tere%20Bin%20Simmba_64-(MrPaji.com).mp3"></audio>
+            <img src="image/tere%20bin.jpg" onclick="clickplay('a3')">
+            
+        </div>
+          <div class="details">
+              <h3>Tere Bin<br><span>Nusrat Fateh Ali Khan</span></h3>
+        </div>
+        </div>
+        <div class="swiper-slide" >
+        <div class="imgbx">
+            <audio id="a4" src="songs/Coca%20Cola%20Tu%20(Luka%20Chuppi)_64-(MrPaji.com).mp3"></audio>
+            <img src="image/coca%20cola.jpg" onclick="clickplay('a4')">
+            
+        </div>
+          <div class="details">
+              <h3>Coca Cola Tu<br><span>Tony Kakkar</span></h3>
+        </div>
+        </div>
+        <div class="swiper-slide" >
+        <div class="imgbx">
+            <audio id="a5" src="songs/Duniya%20(Luka%20Chuppi)_64-(MrPaji.com).mp3"></audio>
+            <img src="image/duniya%20pic.jpg" onclick="clickplay('a5')">
+            
+        </div>
+          <div class="details">
+              <h3>Duniya<br><span>Akhil</span></h3>
+        </div>
+        </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+        </div>  
+      <script type="text/javascript" src="swiper.min.js" ></script>
+      <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 60,
+        stretch: 0,
+        depth: 500,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+    </body>
+</html>

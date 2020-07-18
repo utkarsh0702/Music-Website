@@ -1,0 +1,626 @@
+<html>
+    <head>
+        <title>Music</title>
+        <link rel = "icon" href ="logo.jpg" type = "image/x-icon"> 
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="swiper.min.css" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script>
+                function clickplay(id){
+                    var audio= document.getElementById(id);
+                if(audio.paused){
+                    audio.play();
+                }
+                else{
+                    audio.pause();
+                }
+                }
+            
+            function repeat(id){
+                var audio= document.getElementById(id);
+                audio.pause();
+                audio.currentTime=0;
+                audio.play();
+            }
+            
+                function play(id){
+                    var audio= document.getElementById(id);
+                    audio.play();
+                }
+                function pause(id){
+                    var audio= document.getElementById(id);
+                    audio.pause();
+                }
+            </script>
+        <style>
+            body{
+              width:1250px;
+              height:700px;
+              margin: 0;
+            }
+            #myvideo{
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .content{
+	transform: translate(25%, 15%);
+	width:900px;
+	padding:40px;
+	background:rgb(255,255,255);
+	box-sizing:border-box;
+	border-radius:20px;
+            }
+            .navbar {
+                position: fixed;
+    background-color:rgba(255,255,255,0.3);
+                border-radius: 20px;
+}
+
+.top-nav-collapse {
+    background-color: #4285F4;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #4285F4;
+    }
+}
+            .navbar-nav > li{
+                margin-left: 30px;
+                margin-right: 30px;
+                }
+            li:hover{
+                background-color:azure;
+            }
+            
+            .carouselImg img{
+                margin: 0 auto;
+                display: block;
+                width:auto;
+                height: 550px;
+                max-height: 550px;
+            }
+            #div2{
+                background-color: darkmagenta;
+                width: 820px;
+                height: 700px;
+            }
+            #div2 img{
+                box-shadow: 5px 5px 5px #000;
+                transition: all 1s ease;
+            }
+            #div2 img:hover{
+                box-shadow: 15px 15px 5px #000;
+            }
+            #div3{
+                background-color:chocolate;
+                width: 820px;
+                height: 940px;
+            }
+            .back{
+                width: 250px;
+                height:250px;
+                display: inline-block;
+                background-size: cover;
+                border-radius: 10px;
+                border: 2px solid #000;
+                box-shadow: 0 0 8px #000;
+                position: relative;
+                overflow: hidden;
+            }
+            .back .parent{
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                box-shadow: 0 0 8px #000;
+                overflow: hidden;
+                transform: translateY(100%);
+                transition: .5s;
+                opacity: 0;
+            }
+            .back:hover .parent{
+                transform: translate(0);
+                opacity: 1;
+            }
+            .back .content-text{
+                background-color: rgba(255,255,255,0.7);
+                padding: 8px;
+                font-family: cursive;
+            }
+            #div4{
+                background-color:aqua;
+                width: 820px;
+                height: 700px;
+            }
+            .swiper-container {
+      width: 100%;
+      padding-top: 80px;
+      padding-bottom: -50px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 380px;
+        background: #fff;
+    }
+            .swiper-slide .imgbx{
+                width: 100%;
+                height: 300px;
+                overflow: hidden;
+            }
+            .swiper-slide .imgbx img{
+               width: 100%;
+            }
+            .swiper-slide .details{
+                box-sizing: border-box;
+                font-size: 20px;
+            }
+            .swiper-slide .details h3{
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+                text-align: center;
+                line-height: 20px;
+            }
+            .swiper-slide .details h3 span{
+                font-size: 16px;
+                color: #f44336;
+            }
+            #div5{
+                background-color:lawngreen;
+                width: 820px;
+                height: 700px;
+            }
+            .box{
+	position: absolute;
+	transform: translate(50%,5%);
+	width:500px;
+	padding:40px;
+	background:rgba(0,0,0,0.8);
+	box-sizing:border-box;
+	box-shadow:0 15px 25px rgba(0,0,0,0.5);
+	border-radius:10px;
+}
+.box .inputBox{
+     position: relative;   
+}    
+.box .inputBox input,
+.box .inputBox textarea{
+	width:100%;
+	padding:10px 0;
+	font-size: 16px;
+	color: #fff;	
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+	border:none;
+	border-bottom: 1px solid white;
+	outline:none;
+	background: transparent;
+}
+.box .inputBox label{
+	position: absolute;
+	top:0;
+	left:0;
+	letter-spacing: 1px;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events: none;
+	transition: 0.5s;
+}
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox textarea:focus ~ label,
+.box .inputBox textarea:valid ~ label
+{
+	top: -18px;
+	left :0px;
+	color: #03a9f4;
+	font-size: 12px;
+	
+}
+.box input[type="submit"]
+{
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #fff;
+	background: #03a9f4;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+    .box a{
+        color: yellow;
+    }
+    .box a:hover{
+        color: skyblue;
+    }
+            .fa {
+  padding: 0px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 150px 10px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    color: rgba(0,0,0,0.5);
+}
+
+.fa-facebook {
+
+  background: #3B5998;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+            
+        </style>
+    </head>
+    <body>
+        <div>
+        <video autoplay muted loop id="myvideo">
+            <source src="video/main.mp4" type="video/mp4">
+            </video>
+        <div class="content">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <a class="navbar-brand" href="#div1" style="color:greenyellow">Home<strong></strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#div2" style="color:darkorange"><strong>Album </strong><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#div3" style="color:deeppink"><strong>Artist</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#div4" style="color:chocolate"><strong>Release</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#div5" style="color: aqua"><strong>Contact</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="sign.html" style="color:blue;"><strong>Sign Up</strong></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="log.html" style="color:darkolivegreen"><strong>Log In</strong></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+        <div id="div1">
+        <div id="slide" class="carousel slide carousel-fade" data-ride="carousel">
+  <ol class="carousel-indicators">
+      <li data-target="#slide" data-slide-to="0" class="active"></li>
+      <li data-target="#slide" data-slide-to="1"></li>
+      <li data-target="#slide" data-slide-to="2"></li>
+      <li data-target="#slide" data-slide-to="3"></li>
+      <li data-target="#slide" data-slide-to="4"></li>
+      <li data-target="#side" data-slide-to="5"></li>
+  </ol>
+
+    <!-------------------------SlidShow Start-------------------------------------->
+    
+  <div class="carousel-inner ">
+    <div class="carousel-item active carouselImg">
+        <a href="audio/bekhyali.html" target="_blank">
+      <img src="image/bekhyali.jpg" class="img-fluid mx-auto">
+        </a>
+    </div>
+    <div class="carousel-item carouselImg">
+        <a href="audio/infinity.html" target="_blank">
+      <img src="image/infinity.jpg" class="img-fluid mx-auto">
+        </a>
+    </div>
+    <div class="carousel-item carouselImg">
+        <a href="audio/brothers.html" target="_blank">
+      <img src="image/brothers.jpg" class="img-fluid mx-auto">
+        </a>
+    </div>
+      <div class="carousel-item carouselImg">
+          <a href="audio/look_what.html" target="_blank">
+      <img src="image/look_what.jpg" class="img-fluid mx-auto">
+          </a>
+    </div>
+      <div class="carousel-item carouselImg">
+          <a href="audio/machayenge.html" target="_blank">
+      <img src="image/machayenge.jpg" class="img-fluid mx-auto">
+          </a>
+    </div>
+      <div class="carousel-item carouselImg">
+          <a href="audio/love_me.html" target="_blank">
+      <img src="image/love_me.png" class="img-fluid mx-auto">
+          </a>
+    </div>
+      
+  </div>
+    
+    <!------------------------------Slidshow Images Ends-------------------------------->
+    <a class="carousel-control-prev" href="#slide" role="button" data- slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#slide" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+   </div>
+    </div>
+    <div id="div2">
+        <label style="font-size: 30px; font-family: cursive; color: blue; margin: 30px 350px;"><b><u>Album</u></b></label>
+        <div>
+            <img src="image/Charlie_Puth_-_Attention_(Official_Single_Cover).png" width="125" height="125" style="margin: 40px 80px;" onmouseover="play('a1');" onmouseout="pause('a1');">
+            <audio id="a1" src="songs/Charlie%20Puth%20-%20Attention%20(www.music.luigykent.org).mp3"></audio>
+            
+        </div>
+       <div>
+            <img src="image/43914288_1051437755034188_1259840248523835638_n.jpg" width="125" height="125" style="margin: -165px 250px;" onmouseover="play('a2');" onmouseout="pause('a2');">
+           <audio id="a2" src="songs/02-animals.mp3"></audio>
+        </div>
+        <div>
+            <img src="image/images%20(2).jpeg" width="125" height="125" style="margin: -165px 420px;" onmouseover="play('a3');" onmouseout="pause('a3');">
+            <audio id="a3" src="songs/Do%20Din%20-%20Darshan%20Raval%20320%20Kbps.mp3"></audio>
+        </div>
+        <div>
+            <img src="image/images%20(1).jpeg" width="125" height="125" style="margin: -165px 585px;"  onmouseover="play('a4');" onmouseout="pause('a4');">
+            <audio id="a4" src="songs/DJ%20Snake%20ft.%20Selena%20Gomez%20&%20Ozuna%20&%20Cardi%20B%20-%20Taki%20Taki.mp3"></audio>
+        </div>
+        <div>
+            <img src="image/image.jpg" width="125" height="125" style="margin: 20px 80px;"  onmouseover="play('a5');" onmouseout="pause('a5');">
+            <audio id="a5" src="songs/Jennifer%20Lopez%20-%20Ain't%20Your%20Mama%20-%20(melodydel.com)320.mp3"></audio>
+        </div>
+        <div>
+            <img src="image/bekhyali.jpg" width="125" height="125" style="margin: -145px 250px;"  onmouseover="play('a6');" onmouseout="pause('a6');">
+            <audio id="a6" src="songs/Bekhayali%20320%20Kbps%20-%20Mp3Vista.Com.mp3"></audio>
+        </div>
+        <div>
+            <img src="image/images%20(4).jpeg" width="125" height="125" style="margin: -145px 420px;"  onmouseover="play('a7');" onmouseout="pause('a7');">
+            <audio id="a7" src="songs/Alan%20Walker%20&%20Sophia%20Somajo%20-%20Diamond%20Heart.mp3"></audio>
+        </div>
+        <div>
+            <img src="image/images%20(5).jpeg" width="125" height="125" style="margin: -145px 585px;"  onmouseover="play('a8');" onmouseout="pause('a8');">
+            <audio id="a8" src="songs/Ed%20Sheeran%20-%20Shape%20of%20You%20-%20MP3%20320.mp3"></audio>
+        </div>
+        <div>
+            <img src="image/love_me.png" width="125" height="125" style="margin: 20px 80px;" onmouseover="play('a9');" onmouseout="pause('a9');">
+            <audio id="a9" src="songs/Ellie%20Goulding%20-%20Love%20Me%20Like%20You%20Do%20(Lyrics).mp3"></audio>
+        </div>
+        <div>
+            <img src="image/brothers.jpg" width="125" height="125" style="margin: -145px 250px;"  onmouseover="play('a10');" onmouseout="pause('a10');">
+            <audio id="a10" src="songs/Brothers%20Anthem%20(Brothers).mp3"></audio>
+        </div>
+        <div>
+            <img src="image/infinity.jpg" width="125" height="125" style="margin: -145px 420px;"  onmouseover="play('a11');" onmouseout="pause('a11');">
+            <audio id="a11" src="songs/Infinity-(You2Audio.Com).mp3"></audio>
+        </div>
+        <div>
+            <img src="image/look_what.jpg" width="125" height="125" style="margin: -145px 585px;"  onmouseover="play('a12');" onmouseout="pause('a12');">
+            <audio id="a12" src="songs/06.%20Look%20What%20You%20Made%20Me%20Do%20%5B320%5D.mp3"></audio>
+        </div>
+    </div>
+            
+            
+           <div id="div3">
+                <label style="font-size: 50px; font-family: cursive; color:darkcyan; margin: 30px 350px;"><b><u>Artist</u></b></label><br>
+               <audio src="Jennifer_Lopez_Feat_Pitbull_-_On_The_Floor.mp3" id="art1"></audio>
+               
+               <a style="background-image: url(image/jennifer_lopez.jpg);" class="back" onclick="clickplay('art1')" ondblclick="repeat('art1')" >
+           <div class="parent">
+        <div class="content-text" style="text-align: center;">
+            Jennifer Lopez
+        </div>
+           </div>
+        </a> 
+               <audio src="LoseYourself.mp3" id="art2"></audio>
+        <a style="background-image: url(image/Eminem.jpg);" class="back" onclick="clickplay('art2')" ondblclick="repeat('art2')">
+           <div class="parent" >
+        <div class="content-text" style="text-align: center;">
+            Eminem
+        </div>
+           </div>
+        </a>  
+               <audio src="songs/Phir%20Bhi%20Tumko%20Chaahunga%20Mp3%20Song%20Arijit%20Singh%20filmysongs.co.mp3" id="art3"></audio>
+        <a style="background-image: url(image/arjit_singh.jpg);" class="back" onclick="clickplay('art3')" ondblclick="repeat('art3')">
+           <div class="parent">
+        <div class="content-text" style="text-align: center;">
+            Arjit Singh
+        </div>
+           </div>
+        </a>
+               <audio src="08.%20Gorgeous%20%5B320%5D.mp3" id="art4"></audio>
+        <a style="background-image: url(image/taylor_swift.png);" class="back" onclick="clickplay('art4')" ondblclick="repeat('art4')">
+           <div class="parent">
+        <div class="content-text" style="text-align: center;">
+            Taylor Swift
+        </div>
+           </div>
+        </a>
+               <audio src="003%20SOUTAN%20=%20ZINDAGI%20PYAR%20KA%20GEET%20HAI.mp3" id="art5"></audio>
+        <a style="background-image: url(image/lata-mangeshkar.jpg);" class="back" onclick="clickplay('art5')" ondblclick="repeat('art5')">
+           <div class="parent">
+        <div class="content-text" style="text-align: center;">
+            Lata Mangeshkar        </div>
+           </div>
+        </a> 
+               <audio src="Pehli%20Dafa%20-%20Atif%20Aslam%20320Kbps.mp3" id="art6"></audio>
+        <a style="background-image: url(image/atif-aslam.jpg);" class="back" onclick="clickplay('art6')" ondblclick="repeat('art6')">
+           <div class="parent">
+        <div class="content-text" style="text-align: center;">
+            Atif Aslam
+        </div>
+           </div>
+        </a> 
+               <audio src="kishor.mp3" id="art7"></audio>
+               <a style="background-image: url(image/kishor-kumar.jpg);" class="back" onclick="clickplay('art7')" ondblclick="repeat('art7')">
+           <div class="parent">
+        <div class="content-text" style="text-align: center;">
+        Kishor Kumar
+        </div>
+           </div>
+        </a> 
+               <audio src="Koi%20Vi%20Nahi%20-%20Shirley%20Setia%20320Kbps.mp3" id="art8"></audio>
+        <a style="background-image: url(image/Shirley-Setia.jpg);" class="back" onclick="clickplay('art8')" ondblclick="repeat('art8')">
+           <div class="parent">
+        <div class="content-text" style="text-align: center;">
+            Shirley Setia
+        </div>
+           </div>
+        </a> 
+               <audio src="030%20AAN%20MILO%20SAJNA%20=%20FALAK%20SE%20TOD%20KE.mp3" id="art9"></audio>
+        <a style="background-image: url(image/Mohammed-Rafi.jpg);" class="back" onclick="clickplay('art9')" ondblclick="repeat('art9')">
+           <div class="parent">
+        <div class="content-text" style="text-align: center;">
+            Mohammed Rafi
+        </div>
+           </div>
+        </a>  
+               
+            </div>
+            
+           <div id="div4">
+               <center>
+                <label style="font-size: 50px; font-family: cursive; color:yellow;"><b><u>Latest Release</u></b></label><br> 
+               </center>
+               <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" >
+        <div class="imgbx">
+            <audio id="as1" src="songs/Chale%20Aana%20(De%20De%20Pyaar%20De)_64-(MrPaji.com).mp3"></audio>
+            <img src="image/chale%20aana.jpg" onclick="clickplay('as1')">
+            
+        </div>
+          <div class="details">
+              <h3>Chale Aana<br><span>Armaan Malik</span></h3>
+        </div>
+        </div>
+        <div class="swiper-slide" >
+        <div class="imgbx">
+            <audio id="as2" src="songs/Tujhe%20Kitna%20Chahne%20Lage%20Kabir%20Singh_64-(Mp3Lan).mp3"></audio>
+            <img src="image/tuje%20kitna%20chahne%20lge%20hum%20pic.jpg" onclick="clickplay('as2')">
+            
+        </div>
+          <div class="details">
+              <h3>Tujhe Kitna Chahne Lage<br><span>Arjit Singh</span></h3>
+        </div>
+        </div>
+        <div class="swiper-slide" >
+        <div class="imgbx">
+            <audio id="as3" src="songs/Tere%20Bin%20Simmba_64-(MrPaji.com).mp3"></audio>
+            <img src="image/tere%20bin.jpg" onclick="clickplay('as3')">
+            
+        </div>
+          <div class="details">
+              <h3>Tere Bin<br><span>Nusrat Fateh Ali Khan</span></h3>
+        </div>
+        </div>
+        <div class="swiper-slide" >
+        <div class="imgbx">
+            <audio id="as4" src="songs/Coca%20Cola%20Tu%20(Luka%20Chuppi)_64-(MrPaji.com).mp3"></audio>
+            <img src="image/coca%20cola.jpg" onclick="clickplay('as4')">
+            
+        </div>
+          <div class="details">
+              <h3>Coca Cola Tu<br><span>Tony Kakkar</span></h3>
+        </div>
+        </div>
+        <div class="swiper-slide" >
+        <div class="imgbx">
+            <audio id="as5" src="songs/Duniya%20(Luka%20Chuppi)_64-(MrPaji.com).mp3"></audio>
+            <img src="image/duniya%20pic.jpg" onclick="clickplay('as5')">
+            
+        </div>
+          <div class="details">
+              <h3>Duniya<br><span>Akhil</span></h3>
+        </div>
+        </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+        </div>  
+      <script type="text/javascript" src="swiper.min.js" ></script>
+      <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 60,
+        stretch: 0,
+        depth: 500,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+        </div> 
+            
+            <div id="div5">
+               <center>
+                <label style="font-size: 50px; font-family: cursive; color:orange;"><b><u>Contacts</u></b></label><br> 
+               </center>
+                <div class="box">
+	<form method="post" action="#">
+	<div class="inputBox">
+		<input type="text" name="name" required=" "/>
+		<label>Name</label>
+    </div>
+        <div class="inputBox">
+		<input type="email" name="mail" required=" "/>
+		<label>Email-Id</label>
+	</div>
+    <div class="inputBox">
+		<input type="text" name="sub" required=" "/>
+		<label>Subject</label>
+	</div>
+	<div class="inputBox">
+		<textarea name="mess" cols="25" rows="5" required=" "></textarea>
+		<label>Message</label>
+	</div>
+	<input type="submit" name="submit" value="Send Email"/>
+    </form>
+</div>
+<a href="#" class="fa fa-facebook" style="margin-left: 20px;"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-instagram"></a><br>
+                
+                <label style="margin-top: 250px; margin-left: 600px;">&copy; All Rights Reserved, 2019</label>
+                
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
