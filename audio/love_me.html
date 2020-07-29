@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Audio Player</title>
+        <style>
+            body{
+                background-color: chocolate;
+            }
+            .container{
+                width: 300px;
+                height: 400px;
+                background-color: white;
+                border-radius: 20px;
+                margin-left:500px;
+                margin-top: 100px;
+                overflow: hidden;
+            }
+            .container img{
+                width: 300px;
+                height: 300px;
+            }
+            #re{
+                width: 50px;
+                height: 50px;
+                top:450px;
+                left: 550px;
+                padding-left: 30px;
+                padding-top: 20px;
+                cursor: pointer;
+            }
+            #mu{
+                width: 50px;
+                height: 50px;
+                top:450px;
+                left: 720px;
+                padding-left: 30px;
+                padding-top: 20px;
+                cursor: pointer;
+            }
+            #pp{
+                width: 50px;
+                height: 50px;
+                top:450px;
+                left: 630px;
+                padding-left: 30px;
+                padding-top: 20px;
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            function play(){
+                var audio= document.getElementById("a1");
+                if(audio.paused){
+                    audio.play();
+                    document.getElementById("pp").src="images.png";
+                }
+                else{
+                    audio.pause();
+                    document.getElementById("pp").src="images%20(1).png";
+                }
+                
+            }
+            function mute(){
+                var audio= document.getElementById("a1");
+                if(audio.muted==false){
+                    audio.muted= true;
+                    document.getElementById("mu").src="127-512.png";
+                }
+                else{
+                    audio.muted= false;
+                    document.getElementById("mu").src="25695.png";
+                }
+            }
+            function restart(){
+                var audio= document.getElementById("a1");
+                audio.pause();
+                audio.currentTime=0;
+                audio.play();
+                document.getElementById("pp").src="images.png";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+        <audio autoplay src="Ellie%20Goulding%20-%20Love%20Me%20Like%20You%20Do%20(Lyrics).mp3" id="a1" ></audio>
+        <img src="love_me.png" />
+        <a onclick="restart()"><img src="images%20(3).png" id="re"></a>
+        <a onclick="play()"><img src="images%20(1).png" id="pp"></a>
+        <a onclick="mute()"><img src="25695.png" id="mu"></a>
+        </div>
+    </body>
+</html>
